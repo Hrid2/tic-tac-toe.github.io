@@ -105,6 +105,7 @@ function end(){
             msg.innerHTML = 'Draw!'
             winScreen.classList.add('show')
         }
+
     }
 }
 
@@ -122,7 +123,7 @@ function winCheck(){
 }
 
 function checkWin2(currentClass) {
-  return WINNING_COMBINATIONS.some(combination => {
+  return WINNING_COMBINATIONS.some((combination, index) => {
     return combination.every(index => {
       return cells[index].classList.contains(currentClass)
     })

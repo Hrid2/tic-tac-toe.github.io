@@ -110,12 +110,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(0, 243, 252);
   font-size: 4rem;
   user-select: none;
 }
@@ -169,4 +169,15 @@ p {
 
 .difficulty .green {
   background-color: green;
+}
+
+.box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+  transform: scale(0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
