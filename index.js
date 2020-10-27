@@ -96,6 +96,7 @@ function end(){
     let winner = winCheck()
     if(winner != null){
         if(winner != 'tie'){
+            color(winner)
             let name = (ai === winner) ? 'I': 'You'
             msg.innerHTML = name + ' won'
             winScreen.classList.add('show')
@@ -123,7 +124,7 @@ function winCheck(){
 }
 
 function checkWin2(currentClass) {
-  return WINNING_COMBINATIONS.some((combination, index) => {
+  return WINNING_COMBINATIONS.some((combination) => {
     return combination.every(index => {
       return cells[index].classList.contains(currentClass)
     })
@@ -216,4 +217,17 @@ function aiTrunEasy(){
          availabeSpots[Math.round(Math.random()*(availabeSpots.length-1))].classList.add(ai)
     }
    
+}
+
+function color(winner){
+    for(let i = 0; i < 9; i++){
+        let win = WINNING_COMBINATIONS[0]
+        if(win.every(index => {
+            cells[index].classList.contains(winner)
+        })){
+            let colr = (winner == ai) ? 'red' : 'green'
+            cells[index].classList.add(colr)
+            break
+        }
+    }
 }

@@ -15,7 +15,7 @@ body {
 
 .board {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -180,4 +180,12 @@ p {
   margin-top: 400px;
   transform: scale(0.7);
   background: rgba(0, 0, 0, 0.8);
+}
+
+.cell .red {
+  background-color: red;
+}
+
+.cell .green {
+  background-color: green;
 }
